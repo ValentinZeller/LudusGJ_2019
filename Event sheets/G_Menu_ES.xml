@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>G_Menu_ES</name>
+    <events>
+        <event-block sid="797212507017409">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="327071263581772" type="MOUSE">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">SPR_PlayOFF</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="272705471200024" type="System">
+                    <param id="0" name="Layout">GAME_Level</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="505591020903637">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="173425592658810" type="MOUSE">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">SPR_ExitOFF</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="632334919877457" type="Browser" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

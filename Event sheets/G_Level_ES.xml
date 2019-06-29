@@ -1,0 +1,1364 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>G_Level_ES</name>
+    <events>
+        <variable constant="0" name="victoireJ1" sid="826077461256727" static="0" type="number">0</variable>
+        <variable constant="0" name="victoireJ2" sid="129424969580546" static="0" type="number">0</variable>
+        <include>G_CTF_ES</include>
+        <include>G_payLoad_ES</include>
+        <include>G_destroyHeart_ES</include>
+        <variable comment="Tour du joueur" constant="0" name="TourJoueur" sid="870367600692237" static="0" type="number">1</variable>
+        <event-group description="Partie Dev Lucas ---- Ludus Game Jam SWITCH" sid="526455307400971" title="LUCAS">
+            <sub-events>
+                <event-group description="Quand la scène commence" sid="684345542304571" title="Layout Starting">
+                    <sub-events>
+                        <event-block sid="271241943249038">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="854290885496288" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="564584139746533" type="SPR_Unit21">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="608918747626766" type="SPR_Unit22">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="734380708875289" type="SPR_Unit23">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="985847448796714" type="SpawnPoints">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="745577770401683" title="EveryTicks">
+                    <sub-events>
+                        <event-block sid="763988223933538">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="113257402060390" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="841275317242158" type="TXT_TourJoueur">
+                                    <param id="0" name="Text">&quot;Tour Joueur &quot; &amp; TourJoueur</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="661233229937652">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="695760048562879" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="161609452205277">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="682634904167987" type="System">
+                                            <param id="0" name="Variable">TourJoueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="885078658861862" type="SPR_Unit11">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="516875085990343" type="SPR_Unit12">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="211509831605145" type="SPR_Unit13">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="866212662017356" type="SPR_Unit21">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="155877857841263" type="SPR_Unit22">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="336753669368610" type="SPR_Unit23">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="250881231428568">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="244716653780536" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="824506853248438" type="System">
+                                            <param id="0" name="Variable">TourJoueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">02</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="399184001440703" type="SPR_Unit11">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="776172949729725" type="SPR_Unit12">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="132182171860428" type="SPR_Unit13">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="312329891057722" type="SPR_Unit21">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="367447922682385" type="SPR_Unit22">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="137425598718713" type="SPR_Unit23">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="Quand on clique sur le bouton de fin de tour..." sid="268180008748671" title="FIN DE TOUR [onClick]">
+                    <sub-events>
+                        <event-block sid="301428269113109">
+                            <conditions>
+                                <condition id="0" name="On clicked" sid="706531072779218" type="BTN_FinTour" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="176660426216221">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="865295320266229" type="System">
+                                            <param id="0" name="Variable">TourJoueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="703179843939177" type="System">
+                                            <param id="0" name="Variable">TourJoueur</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="246767234160728">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="813379815152672" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="837975976755591" type="System">
+                                            <param id="0" name="Variable">TourJoueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="161216601741128" type="System">
+                                            <param id="0" name="Variable">TourJoueur</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-group description="" sid="345180229230125" title="Destruction">
+                            <sub-events>
+                                <event-block sid="438292871846017">
+                                    <conditions>
+                                        <condition id="0" name="On clicked" sid="579223518594809" type="BTN_FinTour" />
+                                        <condition id="-2" name="Compare Y" sid="998658106766928" type="Units">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Y co-ordinate">492</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="699862246886746" type="Units" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="496938112359297" title="Creation">
+                            <sub-events>
+                                <event-block sid="883039460323511">
+                                    <conditions>
+                                        <condition id="0" name="On clicked" sid="875376511919531" type="BTN_FinTour" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="252913443900808" type="System">
+                                            <param id="0" name="Object to create">SPR_Unit11</param>
+                                            <param id="1" name="Layer">4</param>
+                                            <param id="2" name="X">95</param>
+                                            <param id="3" name="Y">670</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="195886709279638" type="System">
+                                            <param id="0" name="Object to create">SPR_Unit12</param>
+                                            <param id="1" name="Layer">4</param>
+                                            <param id="2" name="X">185</param>
+                                            <param id="3" name="Y">670</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="526985103173086" type="System">
+                                            <param id="0" name="Object to create">SPR_Unit13</param>
+                                            <param id="1" name="Layer">4</param>
+                                            <param id="2" name="X">275</param>
+                                            <param id="3" name="Y">670</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="233764691282747" type="System">
+                                            <param id="0" name="Object to create">SPR_Unit21</param>
+                                            <param id="1" name="Layer">4</param>
+                                            <param id="2" name="X">880</param>
+                                            <param id="3" name="Y">670</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="921130353183852" type="System">
+                                            <param id="0" name="Object to create">SPR_Unit22</param>
+                                            <param id="1" name="Layer">4</param>
+                                            <param id="2" name="X">970</param>
+                                            <param id="3" name="Y">670</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="804239791472855" type="System">
+                                            <param id="0" name="Object to create">SPR_Unit23</param>
+                                            <param id="1" name="Layer">4</param>
+                                            <param id="2" name="X">1060</param>
+                                            <param id="3" name="Y">670</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="715237745688456" title="MOVE FAMILY">
+                    <sub-events>
+                        <event-block sid="633834550880839">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="607817013393755" type="System" />
+                                <condition id="1" name="Is overlapping another object" sid="161084575080487" type="Joueur1">
+                                    <param id="0" name="Object">Cases</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="337044330705732">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="540563851958107" type="System">
+                                            <param id="0" name="Object">Joueur1</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="155462964045963" type="System">
+                                            <param id="0" name="Object">Joueur1</param>
+                                            <param id="1" name="Expression">Joueur1.Y</param>
+                                            <param id="2" name="Comparison">2</param>
+                                            <param id="3" name="Value">500</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="FamilyJ1MoveTo" id="0" name="Set enabled" sid="843498796497113" type="Joueur1">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="325338063554733">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="648650857971847" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="FamilyJ1MoveTo" id="0" name="Set enabled" sid="188583430383559" type="Joueur1">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="437026904437164">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="624191198163088" type="System" />
+                                <condition id="1" name="Is overlapping another object" sid="429244234976107" type="Joueur2">
+                                    <param id="0" name="Object">Cases</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="662463418317421">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="222216444241124" type="System">
+                                            <param id="0" name="Object">Joueur2</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="796480244279070" type="System">
+                                            <param id="0" name="Object">Joueur2</param>
+                                            <param id="1" name="Expression">Joueur2.Y</param>
+                                            <param id="2" name="Comparison">2</param>
+                                            <param id="3" name="Value">500</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="FamilyJ2MoveTo" id="0" name="Set enabled" sid="810359849254188" type="Joueur2">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="997361205212397">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="853751784159800" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="FamilyJ2MoveTo" id="0" name="Set enabled" sid="167465728967355" type="Joueur2">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="736127784767261">
+                            <conditions>
+                                <condition id="0" name="On clicked" sid="308199947174556" type="BTN_FinTour" />
+                                <condition id="-14" name="Compare variable" sid="988996863174944" type="System">
+                                    <param id="0" name="Variable">TourJoueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="954574468263627" type="System">
+                                    <param id="0" name="Object">Joueur1</param>
+                                    <param id="1" name="Expression">Joueur1.isAttacking</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="-11" name="For Each" sid="404653062128890" type="System">
+                                    <param id="0" name="Object">Joueur1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="405633562038960" type="Joueur1">
+                                    <param id="0" name="Instance variable">currentState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="FamilyJ1MoveTo" id="4" name="Move to XY" sid="696031654250462" type="Joueur1">
+                                    <param id="0" name="X">Self.X +(SPR_CaseSize.Width + 1)</param>
+                                    <param id="1" name="Y">Self.Y</param>
+                                </action>
+                                <action id="3" name="Set enabled" sid="422316872351505" type="BTN_FinTour">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="428018602539792" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action id="3" name="Set enabled" sid="778515010277530" type="BTN_FinTour">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="690475463962746">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="458917389928149" type="System">
+                                            <param id="0" name="Object">Joueur1</param>
+                                            <param id="1" name="Expression">Joueur1.X</param>
+                                            <param id="2" name="Comparison">5</param>
+                                            <param id="3" name="Value">SPR_HeartJ2_Case.X - (Joueur1.portee  + 1) * (SPR_Section1_Case.Width + 1)</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="825291412528014" type="System">
+                                            <param id="0" name="Object">Joueur1</param>
+                                            <param id="1" name="Expression">Joueur1.Y</param>
+                                            <param id="2" name="Comparison">2</param>
+                                            <param id="3" name="Value">SPR_Section2_Case.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="670553091678611" type="SPR_HeartJ2">
+                                            <param id="0" name="Instance variable">pV</param>
+                                            <param id="1" name="Value">Joueur1.Atk</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="678294891180158" type="Joueur1">
+                                            <param id="0" name="Instance variable">isAttacking</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="259739982571044">
+                            <conditions>
+                                <condition id="0" name="On clicked" sid="245384592244562" type="BTN_FinTour" />
+                                <condition id="-14" name="Compare variable" sid="595966175159427" type="System">
+                                    <param id="0" name="Variable">TourJoueur</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="778943159635610" type="System">
+                                    <param id="0" name="Object">Joueur2</param>
+                                    <param id="1" name="Expression">Joueur2.isAttacking</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="-11" name="For Each" sid="831510323402619" type="System">
+                                    <param id="0" name="Object">Joueur2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="303826795270316" type="Joueur2">
+                                    <param id="0" name="Instance variable">currentState</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="FamilyJ2MoveTo" id="4" name="Move to XY" sid="880403631733290" type="Joueur2">
+                                    <param id="0" name="X">Self.X - (SPR_CaseSize.Width + 1)</param>
+                                    <param id="1" name="Y">Self.Y</param>
+                                </action>
+                                <action id="3" name="Set enabled" sid="210884297366997" type="BTN_FinTour">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="783686092719760" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action id="3" name="Set enabled" sid="224522579979582" type="BTN_FinTour">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="227244031596149">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="121673283328731" type="System">
+                                            <param id="0" name="Object">Joueur2</param>
+                                            <param id="1" name="Expression">Joueur2.X</param>
+                                            <param id="2" name="Comparison">3</param>
+                                            <param id="3" name="Value">SPR_HeartJ1_Case.X + (Joueur2.portee + 1) * (SPR_Section1_Case.Width + 1)</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="871368995666223" type="System">
+                                            <param id="0" name="Object">Joueur1</param>
+                                            <param id="1" name="Expression">Joueur2.Y</param>
+                                            <param id="2" name="Comparison">2</param>
+                                            <param id="3" name="Value">SPR_Section2_Case.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="679488102640485" type="SPR_HeartJ1">
+                                            <param id="0" name="Instance variable">pV</param>
+                                            <param id="1" name="Value">Joueur2.Atk</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="425655661648049" type="Joueur2">
+                                            <param id="0" name="Instance variable">isAttacking</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="959276714740176">
+                            <conditions>
+                                <condition behavior="FamilyJ1MoveTo" id="5" name="On stopped by solid" sid="154950824805599" type="Joueur1" />
+                                <condition id="-1" name="Every tick" sid="218741418743737" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="FamilyJ1MoveTo" id="5" name="Set current speed" sid="354289260723876" type="Joueur1">
+                                    <param id="0" name="Current speed">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="228505912184266" type="Joueur1">
+                                    <param id="0" name="Instance variable">hitUnit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="612681007225880" type="Joueur1">
+                                    <param id="0" name="X">Self.X - 1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="787010154005343" type="Joueur1">
+                                    <param id="0" name="Instance variable">hitUnit</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="552156741175121">
+                            <conditions>
+                                <condition behavior="FamilyJ2MoveTo" id="5" name="On stopped by solid" sid="510463942134414" type="Joueur2" />
+                                <condition id="-1" name="Every tick" sid="486197392020228" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="FamilyJ2MoveTo" id="5" name="Set current speed" sid="974368242483548" type="Joueur2">
+                                    <param id="0" name="Current speed">0</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="859445530437302" type="Joueur2">
+                                    <param id="0" name="X">Self.X + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="145348887038562">
+                            <conditions>
+                                <condition id="0" name="On clicked" sid="763661893842157" type="DevKill" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="105056473651684" type="Joueur2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="703723441594499">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="918991162979786" type="System" />
+                                <condition id="-33" name="Pick by comparison" sid="616942776940893" type="System">
+                                    <param id="0" name="Object">Joueur1</param>
+                                    <param id="1" name="Expression">Joueur1.X</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">1187</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="956364109388817" type="System">
+                                    <param id="0" name="Object">Joueur1</param>
+                                    <param id="1" name="Expression">Joueur1.Y</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">486</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="910533559019203" type="System">
+                                    <param id="0" name="Seconds">0.29</param>
+                                </action>
+                                <action behavior="FamilyJ1MoveTo" id="0" name="Set enabled" sid="489352225369045" type="Joueur1">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="239502022427707">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="104767289134887" type="System" />
+                                <condition id="-33" name="Pick by comparison" sid="282665065683289" type="System">
+                                    <param id="0" name="Object">Joueur2</param>
+                                    <param id="1" name="Expression">Joueur2.X</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">92</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="961163893493426" type="System">
+                                    <param id="0" name="Object">Joueur2</param>
+                                    <param id="1" name="Expression">Joueur2.Y</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">486</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="493295176336091" type="System">
+                                    <param id="0" name="Seconds">0.29</param>
+                                </action>
+                                <action behavior="FamilyJ2MoveTo" id="0" name="Set enabled" sid="622866861375473" type="Joueur2">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description='Gère les événements de &quot;Drag&apos;n&apos;Drop&quot;' sid="652066746455891" title="DragDrop Events">
+                    <sub-events>
+                        <event-group description="" sid="813745788239114" title="Joueur1">
+                            <sub-events>
+                                <event-block sid="430091872172283">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="492339812112360" type="SPR_Unit11" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="330971711281380">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="601404776656959" type="SPR_Unit11">
+                                                    <param id="0" name="Object">SPR_Section1_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="832278117776092" type="SPR_Unit11">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">109</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="942577694620239" type="SPR_Unit11">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section11_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section11_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="897439515755213">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="810215997598289" type="SPR_Unit11">
+                                                    <param id="0" name="Object">SPR_Section1_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="549138650755432" type="SPR_Unit11">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">109</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="639803762212719" type="SPR_Unit11">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section12_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section12_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="302629394043832">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="131191511364182" type="SPR_Unit11">
+                                                    <param id="0" name="Object">SPR_Section2_Case</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="724139482212515" type="SPR_Unit11">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section21_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section21_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="788091035886439">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="253426184462819" type="SPR_Unit11">
+                                                    <param id="0" name="Object">SPR_Section3_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="556214504649336" type="SPR_Unit11">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">414</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="496455449372372" type="SPR_Unit11">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section31_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section31_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="166458706259020">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="631463742343556" type="SPR_Unit11">
+                                                    <param id="0" name="Object">SPR_Section3_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="657590593142388" type="SPR_Unit11">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">414</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="119571252848278" type="SPR_Unit11">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section32_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section32_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="830250380695838">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="557980121702530" type="SPR_Unit12" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="396231697615037">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="976711831302277" type="SPR_Unit12">
+                                                    <param id="0" name="Object">SPR_Section1_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="137230780288310" type="SPR_Unit12">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">109</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="114522752776072" type="SPR_Unit12">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section11_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section11_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="922646489897307">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="701746360179964" type="SPR_Unit12">
+                                                    <param id="0" name="Object">SPR_Section1_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="172915468300860" type="SPR_Unit12">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">109</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="510454133212687" type="SPR_Unit12">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section12_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section12_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="287750855043205">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="468660844635427" type="SPR_Unit12">
+                                                    <param id="0" name="Object">SPR_Section2_Case</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="978295211386104" type="SPR_Unit12">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section21_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section21_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="251422588886039">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="341205177825513" type="SPR_Unit12">
+                                                    <param id="0" name="Object">SPR_Section3_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="675651406646212" type="SPR_Unit12">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">414</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="479941379742142" type="SPR_Unit12">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section31_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section31_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="501031841457832">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="463611584755730" type="SPR_Unit12">
+                                                    <param id="0" name="Object">SPR_Section3_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="439190947893526" type="SPR_Unit12">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">414</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="582151092323250" type="SPR_Unit12">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section32_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section32_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="410361092331908">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="486436141698420" type="SPR_Unit13" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="942357722738864">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="929622669870382" type="SPR_Unit13">
+                                                    <param id="0" name="Object">SPR_Section1_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="995853349409504" type="SPR_Unit13">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">109</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="530184911543866" type="SPR_Unit13">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section11_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section11_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="902010027652685">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="564640774778251" type="SPR_Unit13">
+                                                    <param id="0" name="Object">SPR_Section1_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="914693212433659" type="SPR_Unit13">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">109</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="322815196312613" type="SPR_Unit13">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section12_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section12_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="547248552632202">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="719599842563891" type="SPR_Unit13">
+                                                    <param id="0" name="Object">SPR_Section2_Case</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="356368938163058" type="SPR_Unit13">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section21_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section21_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="999148517558161">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="241342632725336" type="SPR_Unit13">
+                                                    <param id="0" name="Object">SPR_Section3_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="613591463587383" type="SPR_Unit13">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">414</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="878771583015780" type="SPR_Unit13">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section31_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section31_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="545723431831449">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="901125073413534" type="SPR_Unit13">
+                                                    <param id="0" name="Object">SPR_Section3_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="850731983033624" type="SPR_Unit13">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">414</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="817020983791429" type="SPR_Unit13">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section32_J1.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section32_J1.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="876158554425578" title="Joueur2">
+                            <sub-events>
+                                <event-block sid="902629072172244">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="456119800574162" type="SPR_Unit21" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="108378346566203">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="995561715547173" type="SPR_Unit21">
+                                                    <param id="0" name="Object">SPR_Section1_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="959598205868652" type="SPR_Unit21">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">109</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="548686650958179" type="SPR_Unit21">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section11_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section11_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="333997551572876">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="556242013826756" type="SPR_Unit21">
+                                                    <param id="0" name="Object">SPR_Section1_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="796409191602267" type="SPR_Unit21">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">109</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="402733806734990" type="SPR_Unit21">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section12_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section12_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="894847759162990">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="654043639607616" type="SPR_Unit21">
+                                                    <param id="0" name="Object">SPR_Section2_Case</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="331134347439914" type="SPR_Unit21">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section21_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section21_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="813024333696376">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="520162046566265" type="SPR_Unit21">
+                                                    <param id="0" name="Object">SPR_Section3_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="491514352874133" type="SPR_Unit21">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">414</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="661179247341250" type="SPR_Unit21">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section31_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section31_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="740897120347438">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="287124185539351" type="SPR_Unit21">
+                                                    <param id="0" name="Object">SPR_Section3_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="577040030382293" type="SPR_Unit21">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">414</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="492154765679903" type="SPR_Unit21">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section32_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section32_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="331148080863906">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="755058362988389" type="SPR_Unit22" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="958904465912302">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="412046678971804" type="SPR_Unit22">
+                                                    <param id="0" name="Object">SPR_Section1_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="212448042791615" type="SPR_Unit22">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">109</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="484759774983510" type="SPR_Unit22">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section11_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section11_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="750152029865816">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="206773721368772" type="SPR_Unit22">
+                                                    <param id="0" name="Object">SPR_Section1_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="846692097693250" type="SPR_Unit22">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">109</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="319193626518539" type="SPR_Unit22">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section12_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section12_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="319160628878633">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="258599192384950" type="SPR_Unit22">
+                                                    <param id="0" name="Object">SPR_Section2_Case</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="775478982774865" type="SPR_Unit22">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section21_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section21_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="142270628705847">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="498554347843193" type="SPR_Unit22">
+                                                    <param id="0" name="Object">SPR_Section3_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="580986937973028" type="SPR_Unit22">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">414</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="399063948425904" type="SPR_Unit22">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section31_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section31_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="245377725328750">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="183896159829787" type="SPR_Unit22">
+                                                    <param id="0" name="Object">SPR_Section3_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="680789342881463" type="SPR_Unit22">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">414</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="996323516218420" type="SPR_Unit22">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section32_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section32_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="372942056364462">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="600825294476969" type="SPR_Unit23" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="869678093120653">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="455760031714170" type="SPR_Unit23">
+                                                    <param id="0" name="Object">SPR_Section1_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="520734384083766" type="SPR_Unit23">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">109</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="787839220598889" type="SPR_Unit23">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section11_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section11_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="750150007223439">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="601770283719461" type="SPR_Unit23">
+                                                    <param id="0" name="Object">SPR_Section1_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="534142186746556" type="SPR_Unit23">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">109</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="142533476339092" type="SPR_Unit23">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section12_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section12_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="407027513960800">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="719246157702484" type="SPR_Unit23">
+                                                    <param id="0" name="Object">SPR_Section2_Case</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="106231532581281" type="SPR_Unit23">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section21_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section21_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="388601661756097">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="590967469737906" type="SPR_Unit23">
+                                                    <param id="0" name="Object">SPR_Section3_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="907462874801494" type="SPR_Unit23">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">414</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="811977241725783" type="SPR_Unit23">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section31_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section31_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="688554454664427">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="180816314032943" type="SPR_Unit23">
+                                                    <param id="0" name="Object">SPR_Section3_Case</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="455824146035853" type="SPR_Unit23">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">414</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="183566137267294" type="SPR_Unit23">
+                                                    <param id="0" name="X">SPR_SpawnPoint_Section32_J2.X</param>
+                                                    <param id="1" name="Y">SPR_SpawnPoint_Section32_J2.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="292414935126717" title="Overlapping with Units">
+                            <sub-events>
+                                <event-block sid="575004886771445">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="147706249427792" type="SPR_Unit11" />
+                                        <condition id="1" name="Is overlapping another object" sid="563734236213022" type="SPR_Unit11">
+                                            <param id="0" name="Object">Units</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="933928382786862" type="SPR_Unit11">
+                                            <param id="0" name="X">95</param>
+                                            <param id="1" name="Y">670</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="668808068378756">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="942412314664087" type="SPR_Unit12" />
+                                        <condition id="1" name="Is overlapping another object" sid="915931950733786" type="SPR_Unit12">
+                                            <param id="0" name="Object">Units</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="395342674303988" type="SPR_Unit12">
+                                            <param id="0" name="X">185</param>
+                                            <param id="1" name="Y">670</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="999612052338622">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="564121952227749" type="SPR_Unit13" />
+                                        <condition id="1" name="Is overlapping another object" sid="275175211482613" type="SPR_Unit13">
+                                            <param id="0" name="Object">Units</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="696782202707762" type="SPR_Unit13">
+                                            <param id="0" name="X">275</param>
+                                            <param id="1" name="Y">670</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="661451853880402">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="565696392606193" type="SPR_Unit21" />
+                                        <condition id="1" name="Is overlapping another object" sid="458008891341038" type="SPR_Unit21">
+                                            <param id="0" name="Object">Units</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="112451077764218" type="SPR_Unit21">
+                                            <param id="0" name="X">1020</param>
+                                            <param id="1" name="Y">670</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="617287025368757">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="410055141357213" type="SPR_Unit22" />
+                                        <condition id="1" name="Is overlapping another object" sid="694441532177974" type="SPR_Unit22">
+                                            <param id="0" name="Object">Units</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="732901681860544" type="SPR_Unit22">
+                                            <param id="0" name="X">970</param>
+                                            <param id="1" name="Y">670</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="354470863357841">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="595267000970895" type="SPR_Unit23" />
+                                        <condition id="1" name="Is overlapping another object" sid="571932997470891" type="SPR_Unit23">
+                                            <param id="0" name="Object">Units</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="921716788188557" type="SPR_Unit23">
+                                            <param id="0" name="X">1060</param>
+                                            <param id="1" name="Y">670</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="306286278872250" title="ATTAQUES">
+                    <sub-events>
+                        <event-group description="" sid="861823943885592" title="J1 v J2">
+                            <sub-events>
+                                <event-block sid="577560281771666">
+                                    <conditions>
+                                        <condition id="0" name="On clicked" sid="650023306497142" type="BTN_FinTour" />
+                                        <condition id="-14" name="Compare variable" sid="239662093240158" type="System">
+                                            <param id="0" name="Variable">TourJoueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-11" name="For Each" sid="510902958281494" type="System">
+                                            <param id="0" name="Object">Joueur1</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="970284555346225" type="Joueur1">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">492</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="486161665277749" type="Joueur2">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">492</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="295618765822177">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="670453568802462" type="Joueur2">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="X co-ordinate">Joueur1.X</param>
+                                                </condition>
+                                                <condition id="-33" name="Pick by comparison" sid="969403485257103" type="System">
+                                                    <param id="0" name="Object">Joueur2</param>
+                                                    <param id="1" name="Expression">Joueur2.Y</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Joueur1.Y</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="365976623919921" type="Joueur2">
+                                                    <param id="0" name="Instance variable">pV</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-33" name="Pick by comparison" sid="208215065275895" type="System">
+                                                    <param id="0" name="Object">Joueur1</param>
+                                                    <param id="1" name="Expression">Joueur1.X</param>
+                                                    <param id="2" name="Comparison">5</param>
+                                                    <param id="3" name="Value">Joueur2.X - ( (Joueur1.portee + 1) * (SPR_Section1_Case.Width + 1) )</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="757622676576339" type="Joueur1">
+                                                    <param id="0" name="Instance variable">isAttacking</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-12" name="Subtract from" sid="943717888557646" type="Joueur2">
+                                                    <param id="0" name="Instance variable">pV</param>
+                                                    <param id="1" name="Value">Joueur1.Atk</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="769520035864281">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="987193256590234" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="692437730036605" type="Joueur1">
+                                                    <param id="0" name="Instance variable">isAttacking</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="183942893905359" title="J2 v J1">
+                            <sub-events>
+                                <event-block sid="431762015732073">
+                                    <conditions>
+                                        <condition id="0" name="On clicked" sid="899290504305030" type="BTN_FinTour" />
+                                        <condition id="-14" name="Compare variable" sid="195037922424685" type="System">
+                                            <param id="0" name="Variable">TourJoueur</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-11" name="For Each" sid="604041164326571" type="System">
+                                            <param id="0" name="Object">Joueur2</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="539901094915393" type="Joueur1">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">492</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="322101075262532" type="Joueur2">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">492</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="732380245801540">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="249989714896900" type="Joueur1">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">Joueur2.X</param>
+                                                </condition>
+                                                <condition id="-33" name="Pick by comparison" sid="958129881734195" type="System">
+                                                    <param id="0" name="Object">Joueur1</param>
+                                                    <param id="1" name="Expression">Joueur1.Y</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">Joueur2.Y</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="391229519398078" type="Joueur1">
+                                                    <param id="0" name="Instance variable">pV</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-33" name="Pick by comparison" sid="369988716604180" type="System">
+                                                    <param id="0" name="Object">Joueur2</param>
+                                                    <param id="1" name="Expression">Joueur2.X</param>
+                                                    <param id="2" name="Comparison">3</param>
+                                                    <param id="3" name="Value">Joueur1.X + ( (Joueur2.portee + 1) * (SPR_Section1_Case.Width + 1) )</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="520423593893100" type="Joueur2">
+                                                    <param id="0" name="Instance variable">isAttacking</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-12" name="Subtract from" sid="228393010859935" type="Joueur1">
+                                                    <param id="0" name="Instance variable">pV</param>
+                                                    <param id="1" name="Value">Joueur2.Atk</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="354340188755248">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="963328974245417" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="107173019623938" type="Joueur2">
+                                                    <param id="0" name="Instance variable">isAttacking</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="402806421992946" title="Kills Check">
+                            <sub-events>
+                                <event-block sid="643152534573080">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="984410284161529" type="Joueur1">
+                                            <param id="0" name="Instance variable">pV</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="966670772333079" type="Joueur1" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="660006413605826">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="412030415439867" type="Joueur2">
+                                            <param id="0" name="Instance variable">pV</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="736396782855600" type="Joueur2" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-block sid="729277916816080">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="339370265327702" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="523969178086911" type="Background">
+                    <param id="0" name="Audio file">Scene3</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

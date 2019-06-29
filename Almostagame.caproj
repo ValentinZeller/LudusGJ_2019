@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Almostagame</name>
+    <description>Crossover Switch Game by Ludus Academie</description>
+    <version>0.1.0</version>
+    <author>Olivier Fiona Maxime Romain Lucas Kevin Valentin Valentin</author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.ludusacademie.flvvkrm</app-id>
+    <unique-id>14c5rbq165736</unique-id>
+    <saved-with-version>26900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_MoveTo" version="1">MoveTo</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Plateau_Cases">
+            <object-type name="SPR_Section1_Case" sid="371598440216694">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="238709549821015" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_Section2_Case" sid="646868679299045">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="916115144401271" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_Section3_Case" sid="551615493459022">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="947646155921536" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_CaseSize" sid="718320361424358">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664725561810261" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="HUD">
+            <object-folder name="devOnly">
+                <object-folder name="spawnPoints">
+                    <object-folder name="Joueur1">
+                        <object-type name="SPR_SpawnPoint_Section11_J1" sid="792930995544795">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="929483674748256" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="SPR_SpawnPoint_Section12_J1" sid="322401069467141">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="336060569772197" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="SPR_SpawnPoint_Section21_J1" sid="896177329039820">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="178703301236103" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="SPR_SpawnPoint_Section22_J1" sid="743127616555723">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="109309648049233" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="SPR_SpawnPoint_Section31_J1" sid="936324965886321">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="792904641404583" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="SPR_SpawnPoint_Section32_J1" sid="402162254316269">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653215676093180" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                    </object-folder>
+                    <object-folder name="Joueur2">
+                        <object-type name="SPR_SpawnPoint_Section11_J2" sid="160928279554814">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="487162470792624" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="SPR_SpawnPoint_Section12_J2" sid="753404334518840">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="986397329273979" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="SPR_SpawnPoint_Section21_J2" sid="990953911826397">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="685473504031737" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="SPR_SpawnPoint_Section31_J2" sid="425305828123845">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="915995841373424" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="SPR_SpawnPoint_Section22_J2" sid="833198356169561">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="199650891911890" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                        <object-type name="SPR_SpawnPoint_Section32_J2" sid="768054430165373">
+                            <plugin id="Sprite" />
+                            <animation-folder>
+                                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="424122975163242" speed="5">
+                                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                </animation>
+                            </animation-folder>
+                        </object-type>
+                    </object-folder>
+                </object-folder>
+            </object-folder>
+            <object-folder name="borderItems">
+                <object-type name="SPR_Bordure_BOTTOM" sid="569556169387465">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="527063354772692" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SPR_Bordure_LEFT" sid="333093875883625">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="716007701847831" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SPR_Bordure_RIGHT" sid="676205014408248">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="257659902277383" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SPR_Bordure_TOP" sid="796684991080760">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="785732435499906" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Texts">
+                <object-type name="TXT_TourJoueur" sid="270400123153838">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="TXT_HeartLifeJ2" sid="580820078200908">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="TXT_HeartLifeJ1" sid="570395972243487">
+                    <plugin id="Text" />
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-folder name="BUTTON">
+            <object-folder name="FinDeTour">
+                <object-type name="BTN_FinTour" sid="765382669584339">
+                    <plugin id="Button" />
+                </object-type>
+            </object-folder>
+            <object-folder name="devOnly">
+                <object-type name="DevKill" sid="332694428947497">
+                    <plugin id="Button" />
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-folder name="Units">
+            <object-type name="SPR_Unit11" sid="988009156454390">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="637893464657460">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="275360673976364" speed="5">
+                        <frame duration="1" hotspotX="0.501597" hotspotY="0.5" original-source="C:\Users\lucas\OneDrive\Bureau\dessins\lol\amumu.png">
+                            <collision-poly>
+                                <point x="0.13738" y="0.0814394" />
+                                <point x="0.498403" y="0" />
+                                <point x="0.846645" y="0.0909091" />
+                                <point x="0.773163" y="0.5" />
+                                <point x="0.875399" y="0.926136" />
+                                <point x="0.498403" y="0.998106" />
+                                <point x="0.118211" y="0.929924" />
+                                <point x="0.265176" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_Unit12" sid="664716923151259">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="858255530774779">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="937445393133068" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500792" original-source="C:\Users\lucas\OneDrive\Bureau\dessins\lol\gnar.png">
+                            <collision-poly>
+                                <point x="0.0487179" y="0.0301109" />
+                                <point x="0.5" y="0.0697306" />
+                                <point x="0.94359" y="0.0348653" />
+                                <point x="0.851282" y="0.499208" />
+                                <point x="0.797436" y="0.874802" />
+                                <point x="0.5" y="1" />
+                                <point x="0.187179" y="0.884311" />
+                                <point x="0.15641" y="0.499208" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_Unit13" sid="627717723803424">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="907965674865204">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="633962435916463" speed="5">
+                        <frame duration="1" hotspotX="0.501285" hotspotY="0.5" original-source="C:\Users\lucas\OneDrive\Bureau\dessins\lol\teemo.png">
+                            <collision-poly>
+                                <point x="0.14653" y="0.0962838" />
+                                <point x="0.498715" y="0.0202703" />
+                                <point x="0.737789" y="0.172297" />
+                                <point x="0.886889" y="0.5" />
+                                <point x="0.817481" y="0.880068" />
+                                <point x="0.498715" y="1" />
+                                <point x="0.190231" y="0.875" />
+                                <point x="0.123393" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_Unit21" sid="756865760534358">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="479861980715455">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="289086641841017" speed="5">
+                        <frame duration="1" hotspotX="0.500736" hotspotY="0.50079" original-source="C:\Users\lucas\OneDrive\Bureau\dessins\overwatch\ange.png">
+                            <collision-poly>
+                                <point x="0.293078" y="0.314376" />
+                                <point x="0.499264" y="0" />
+                                <point x="0.702504" y="0.319115" />
+                                <point x="0.977909" y="0.49921" />
+                                <point x="0.72754" y="0.707741" />
+                                <point x="0.499264" y="1" />
+                                <point x="0.254786" y="0.726698" />
+                                <point x="0.017673" y="0.49921" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_Unit22" sid="186788369055419">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="520382613006995">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="575125048238500" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\lucas\OneDrive\Bureau\dessins\overwatch\chacal.png">
+                            <collision-poly>
+                                <point x="0.242604" y="0.115169" />
+                                <point x="0.5" y="0.0379213" />
+                                <point x="0.816568" y="0.0870787" />
+                                <point x="0.920118" y="0.5" />
+                                <point x="0.863905" y="0.935393" />
+                                <point x="0.5" y="1" />
+                                <point x="0.192308" y="0.908708" />
+                                <point x="0.153846" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_Unit23" sid="372164729653951">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="620010829392652">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="221549470471962" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\lucas\OneDrive\Bureau\dessins\overwatch\reinhart.png">
+                            <collision-poly>
+                                <point x="0.193023" y="0.129283" />
+                                <point x="0.5" y="0.0046729" />
+                                <point x="0.8" y="0.133956" />
+                                <point x="0.753488" y="0.5" />
+                                <point x="0.790698" y="0.859813" />
+                                <point x="0.5" y="1" />
+                                <point x="0.216279" y="0.85514" />
+                                <point x="0.253488" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Elements">
+            <object-type name="SPR_HeartJ1" sid="993989560764957">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811597657355614" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Documents\Ludus\LudusGameJam_SwitchCrossover\Animations\SPR_Heart\Default\000.png">
+                            <collision-poly>
+                                <point x="0.148" y="0.148" />
+                                <point x="0.5" y="0.184" />
+                                <point x="0.804" y="0.196" />
+                                <point x="0.72" y="0.5" />
+                                <point x="0.636" y="0.636" />
+                                <point x="0.5" y="0.82" />
+                                <point x="0.308" y="0.692" />
+                                <point x="0.164" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_HeartJ1_Case" sid="488457273893011">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="194650427750255" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_HeartJ2" sid="737006278872180">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="891708199590657" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Documents\Ludus\LudusGameJam_SwitchCrossover\Animations\SPR_Heart\Default\000.png">
+                            <collision-poly>
+                                <point x="0.148" y="0.148" />
+                                <point x="0.5" y="0.184" />
+                                <point x="0.804" y="0.196" />
+                                <point x="0.72" y="0.5" />
+                                <point x="0.636" y="0.636" />
+                                <point x="0.5" y="0.82" />
+                                <point x="0.308" y="0.692" />
+                                <point x="0.164" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_HeartJ2_Case" sid="773235750853495">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="855597661853494" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_Section2_Payload" sid="900841898127185">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="924212839174437">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="269285960204982" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Menu">
+            <object-type name="SPR_ExitOFF" sid="305702745840928">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="310618330040871" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\lucas\OneDrive\Bureau\ExitOFF.png">
+                            <collision-poly>
+                                <point x="0.14726" y="0.14726" />
+                                <point x="0.5" y="0.00342466" />
+                                <point x="0.85274" y="0.14726" />
+                                <point x="1" y="0.5" />
+                                <point x="0.85274" y="0.85274" />
+                                <point x="0.5" y="1" />
+                                <point x="0.14726" y="0.85274" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_ExitON" sid="371553879492308">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="550428949853377" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\lucas\OneDrive\Bureau\ExitON.png">
+                            <collision-poly>
+                                <point x="0.14726" y="0.14726" />
+                                <point x="0.5" y="0.00342466" />
+                                <point x="0.85274" y="0.14726" />
+                                <point x="1" y="0.5" />
+                                <point x="0.85274" y="0.85274" />
+                                <point x="0.5" y="1" />
+                                <point x="0.14726" y="0.85274" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_PlayOFF" sid="756437767616723">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="237764688796529" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\lucas\OneDrive\Bureau\PlayOFF.png">
+                            <collision-poly>
+                                <point x="0.14726" y="0.14726" />
+                                <point x="0.5" y="0.00342466" />
+                                <point x="0.85274" y="0.14726" />
+                                <point x="1" y="0.5" />
+                                <point x="0.85274" y="0.85274" />
+                                <point x="0.5" y="1" />
+                                <point x="0.14726" y="0.85274" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_PlayON" sid="931418828828118">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211471488708484" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\lucas\OneDrive\Bureau\PlayON.png">
+                            <collision-poly>
+                                <point x="0.14726" y="0.14726" />
+                                <point x="0.5" y="0.00342466" />
+                                <point x="0.85274" y="0.14726" />
+                                <point x="1" y="0.5" />
+                                <point x="0.85274" y="0.85274" />
+                                <point x="0.5" y="1" />
+                                <point x="0.14726" y="0.85274" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TBG_Background" sid="143151612705217">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="926781468820318" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TXT_Play" sid="409643083752370">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TXT_Exit" sid="965094820500438">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TXT_TitleGame" sid="344156115423494">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Special">
+            <object-type name="MOUSE" sid="312918509195597">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="Browser" sid="617383933988886">
+                <plugin id="Browser" />
+            </object-type>
+        </object-folder>
+        <object-folder name="CTF">
+            <object-type name="SPR_BlueFlag" sid="934199074441243">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="877712955964773">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="408213208968755" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502262" original-source="C:\Users\k-ev-\Desktop\GAME JAM\images\flag_sprite.png">
+                            <collision-poly>
+                                <point x="0.0833333" y="0.0859729" />
+                                <point x="0.5" y="0.0542986" />
+                                <point x="0.907895" y="0.0950226" />
+                                <point x="0.197368" y="0.497738" />
+                                <point x="0.442982" y="0.425339" />
+                                <point x="0.5" y="0.41629" />
+                                <point x="0.232456" y="0.760181" />
+                                <point x="0.140351" y="0.497738" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_RedFlag" sid="688659399717927">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="286764075087900">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="458014699335355" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502262" original-source="C:\Users\k-ev-\Desktop\GAME JAM\images\flag_orange_sprite.png">
+                            <collision-poly>
+                                <point x="0.0833333" y="0.0859729" />
+                                <point x="0.5" y="0.0542986" />
+                                <point x="0.907895" y="0.0950226" />
+                                <point x="0.197368" y="0.497738" />
+                                <point x="0.442982" y="0.425339" />
+                                <point x="0.5" y="0.41629" />
+                                <point x="0.232456" y="0.760181" />
+                                <point x="0.140351" y="0.497738" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_StartRedFlag" sid="851646063076419">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="810676102721414" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SPR_StartBlueFlag" sid="316808867858356">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="586271872952793" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="audio">
+            <object-type name="Background" sid="912181819803523">
+                <plugin id="Audio" />
+            </object-type>
+        </object-folder>
+    </object-folder>
+    <families>
+        <family name="Units" plugin-id="Sprite" sid="796236790908086">
+            <members>
+                <member>SPR_Unit11</member>
+                <member>SPR_Unit12</member>
+                <member>SPR_Unit13</member>
+                <member>SPR_Unit21</member>
+                <member>SPR_Unit22</member>
+                <member>SPR_Unit23</member>
+            </members>
+        </family>
+        <family name="Joueur1" plugin-id="Sprite" sid="967229423453666">
+            <members>
+                <member>SPR_Unit11</member>
+                <member>SPR_Unit12</member>
+                <member>SPR_Unit13</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Atk" sid="928129507117246" type="number" />
+                <instance-variable name="portee" sid="740707862417195" type="number" />
+                <instance-variable name="isAttacking" sid="870148588700014" type="number" />
+                <instance-variable name="pV" sid="825990251337735" type="number" />
+                <instance-variable comment="True : Touche une autre unité adverse / False : ne touche pas" name="hitUnit" sid="211339046525876" type="boolean" />
+                <instance-variable name="currentState" sid="688133813386113" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="FamilyJ1Solid" sid="935313037966397">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="FamilyJ1MoveTo" sid="515643433962945">
+                    <behavior id="Rex_MoveTo" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Joueur2" plugin-id="Sprite" sid="171033938783930">
+            <members>
+                <member>SPR_Unit21</member>
+                <member>SPR_Unit22</member>
+                <member>SPR_Unit23</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Atk" sid="636401243222917" type="number" />
+                <instance-variable name="portee" sid="521931299776033" type="number" />
+                <instance-variable name="isAttacking" sid="210037572541760" type="number" />
+                <instance-variable name="pV" sid="636101753620647" type="number" />
+                <instance-variable name="currentState" sid="194641743580356" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="FamilyJ2Solid" sid="766930552355945">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="FamilyJ2MoveTo" sid="518314847650691">
+                    <behavior id="Rex_MoveTo" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="SpawnPoints" plugin-id="Sprite" sid="200095433307983">
+            <members>
+                <member>SPR_SpawnPoint_Section11_J1</member>
+                <member>SPR_SpawnPoint_Section11_J2</member>
+                <member>SPR_SpawnPoint_Section12_J1</member>
+                <member>SPR_SpawnPoint_Section12_J2</member>
+                <member>SPR_SpawnPoint_Section21_J1</member>
+                <member>SPR_SpawnPoint_Section21_J2</member>
+                <member>SPR_SpawnPoint_Section22_J1</member>
+                <member>SPR_SpawnPoint_Section22_J2</member>
+                <member>SPR_SpawnPoint_Section31_J1</member>
+                <member>SPR_SpawnPoint_Section31_J2</member>
+                <member>SPR_SpawnPoint_Section32_J1</member>
+                <member>SPR_SpawnPoint_Section32_J2</member>
+            </members>
+        </family>
+        <family name="Heart" plugin-id="Sprite" sid="275198320445863">
+            <members>
+                <member>SPR_HeartJ1</member>
+                <member>SPR_HeartJ2</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="pV" sid="401321997269295" type="number" />
+            </instance-variables>
+        </family>
+        <family name="Cases" plugin-id="Sprite" sid="733636766347082">
+            <members>
+                <member>SPR_Section1_Case</member>
+                <member>SPR_Section2_Case</member>
+                <member>SPR_Section3_Case</member>
+                <member>SPR_StartBlueFlag</member>
+                <member>SPR_StartRedFlag</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>GAME_Level.xml</layout>
+        <layout>GAME_Menu.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>G_Level_ES.xml</event-sheet>
+        <event-sheet>G_destroyHeart_ES.xml</event-sheet>
+        <event-sheet>G_payLoad_ES.xml</event-sheet>
+        <event-sheet>G_Menu_ES.xml</event-sheet>
+        <event-sheet>G_CTF_ES.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="MOUSE" uid="54" />
+        <global-instance type="Browser" uid="55" />
+        <global-instance type="Background" uid="65">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>Yes</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder>
+        <file name="Theme3.m4a" />
+        <file name="Scene3.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>G_CTF_ES</name>
+    <events>
+        <event-block sid="601474590490004">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="622815104707162" type="Joueur1">
+                    <param id="0" name="Object">SPR_RedFlag</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="570254899889121" type="System">
+                    <param id="0" name="Object">Joueur1</param>
+                    <param id="1" name="Expression">Joueur1.Y</param>
+                    <param id="2" name="Comparison">5</param>
+                    <param id="3" name="Value">341</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="976012134324323" type="System">
+                    <param id="0" name="Object">Joueur1</param>
+                    <param id="1" name="Expression">Joueur1.Y</param>
+                    <param id="2" name="Comparison">3</param>
+                    <param id="3" name="Value">486</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="999638361519477" type="SPR_RedFlag">
+                    <param id="0" name="Pin to">Joueur1</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="166727471361400" type="SPR_RedFlag">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="236656787788894">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="717051082824178" type="Joueur2">
+                    <param id="0" name="Object">SPR_BlueFlag</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="988973306975699" type="System">
+                    <param id="0" name="Object">Joueur2</param>
+                    <param id="1" name="Expression">Joueur2.Y</param>
+                    <param id="2" name="Comparison">5</param>
+                    <param id="3" name="Value">341</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="478443356019168" type="System">
+                    <param id="0" name="Object">Joueur2</param>
+                    <param id="1" name="Expression">Joueur2.Y</param>
+                    <param id="2" name="Comparison">3</param>
+                    <param id="3" name="Value">486</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="132603190368723" type="SPR_BlueFlag">
+                    <param id="0" name="Pin to">Joueur2</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="379853274099715" type="SPR_BlueFlag">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="633882318374805">
+            <conditions>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="158450569197755" type="SPR_BlueFlag" />
+                <condition behavior="Pin" id="0" name="Is pinned" sid="467704915248142" type="SPR_RedFlag" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="424559918825304">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="313774666206346" type="System">
+                            <param id="0" name="Object">Joueur1</param>
+                            <param id="1" name="Expression">Joueur1.Y</param>
+                            <param id="2" name="Comparison">5</param>
+                            <param id="3" name="Value">341</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="464851208792513" type="System">
+                            <param id="0" name="Object">Joueur1</param>
+                            <param id="1" name="Expression">Joueur1.Y</param>
+                            <param id="2" name="Comparison">3</param>
+                            <param id="3" name="Value">486</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="212337018689501" type="System">
+                            <param id="0" name="Object">Joueur2</param>
+                            <param id="1" name="Expression">Joueur2.Y</param>
+                            <param id="2" name="Comparison">5</param>
+                            <param id="3" name="Value">341</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="712633218839678" type="System">
+                            <param id="0" name="Object">Joueur2</param>
+                            <param id="1" name="Expression">Joueur2.Y</param>
+                            <param id="2" name="Comparison">3</param>
+                            <param id="3" name="Value">486</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="283383829900094" type="Joueur1">
+                            <param id="0" name="Instance variable">currentState</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="968518437863056" type="Joueur2">
+                            <param id="0" name="Instance variable">currentState</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="811358776092896">
+            <conditions>
+                <condition id="-22" name="Else" sid="998576883692396" type="System" />
+                <condition behavior="Pin" id="0" name="Is pinned" sid="634478191182560" type="SPR_RedFlag" />
+                <condition id="-33" name="Pick by comparison" sid="607235627415302" type="System">
+                    <param id="0" name="Object">Joueur1</param>
+                    <param id="1" name="Expression">Joueur1.X</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">SPR_SpawnPoint_Section31_J2.X</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="361069778661825" type="System">
+                    <param id="0" name="Object">Joueur1</param>
+                    <param id="1" name="Expression">Joueur1.Y</param>
+                    <param id="2" name="Comparison">5</param>
+                    <param id="3" name="Value">341</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="236187862903641" type="System">
+                    <param id="0" name="Object">Joueur1</param>
+                    <param id="1" name="Expression">Joueur1.Y</param>
+                    <param id="2" name="Comparison">3</param>
+                    <param id="3" name="Value">486</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="359309377076266" type="Joueur1">
+                    <param id="0" name="Instance variable">currentState</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="944836104979518">
+            <conditions>
+                <condition id="-22" name="Else" sid="342948048491504" type="System" />
+                <condition behavior="Pin" id="0" name="Is pinned" sid="387572465777173" type="SPR_BlueFlag" />
+                <condition id="-33" name="Pick by comparison" sid="757333290823906" type="System">
+                    <param id="0" name="Object">Joueur2</param>
+                    <param id="1" name="Expression">Joueur2.X</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">92</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="129693032072394" type="System">
+                    <param id="0" name="Object">Joueur2</param>
+                    <param id="1" name="Expression">Joueur2.Y</param>
+                    <param id="2" name="Comparison">5</param>
+                    <param id="3" name="Value">341</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="323756049892116" type="System">
+                    <param id="0" name="Object">Joueur2</param>
+                    <param id="1" name="Expression">Joueur2.Y</param>
+                    <param id="2" name="Comparison">3</param>
+                    <param id="3" name="Value">486</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="724296839399540" type="Joueur2">
+                    <param id="0" name="Instance variable">currentState</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="473200412072523">
+            <conditions>
+                <condition id="0" name="On clicked" sid="430293407654434" type="BTN_FinTour" />
+                <condition id="-7" name="Compare instance variable" sid="195469444508381" type="Joueur2">
+                    <param id="0" name="Instance variable">currentState</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="710217058468481" type="System">
+                    <param id="0" name="Variable">TourJoueur</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="166132590339985" type="System">
+                    <param id="0" name="Object">Joueur2</param>
+                    <param id="1" name="Expression">Joueur2.Y</param>
+                    <param id="2" name="Comparison">5</param>
+                    <param id="3" name="Value">341</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="222725507511508" type="System">
+                    <param id="0" name="Object">Joueur2</param>
+                    <param id="1" name="Expression">Joueur2.Y</param>
+                    <param id="2" name="Comparison">3</param>
+                    <param id="3" name="Value">486</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="FamilyJ2MoveTo" id="4" name="Move to XY" sid="707823595483274" type="Joueur2">
+                    <param id="0" name="X">Self.X + (SPR_Section1_Case.Width + 1)</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+                <action id="3" name="Set enabled" sid="805609808746337" type="BTN_FinTour">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="369940467311103" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="3" name="Set enabled" sid="761841541430341" type="BTN_FinTour">
+                    <param id="0" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="420579965069696">
+            <conditions>
+                <condition id="0" name="On clicked" sid="372862212023990" type="BTN_FinTour" />
+                <condition id="-7" name="Compare instance variable" sid="320924718604721" type="Joueur1">
+                    <param id="0" name="Instance variable">currentState</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="892891608321420" type="System">
+                    <param id="0" name="Variable">TourJoueur</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="369802676701430" type="System">
+                    <param id="0" name="Object">Joueur1</param>
+                    <param id="1" name="Expression">Joueur1.Y</param>
+                    <param id="2" name="Comparison">5</param>
+                    <param id="3" name="Value">341</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="563237010234635" type="System">
+                    <param id="0" name="Object">Joueur1</param>
+                    <param id="1" name="Expression">Joueur1.Y</param>
+                    <param id="2" name="Comparison">3</param>
+                    <param id="3" name="Value">486</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="FamilyJ1MoveTo" id="4" name="Move to XY" sid="971712411630013" type="Joueur1">
+                    <param id="0" name="X">Self.X -(SPR_Section1_Case.Width + 1)</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+                <action id="3" name="Set enabled" sid="927284923596561" type="BTN_FinTour">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="499939700283155" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="3" name="Set enabled" sid="850887157605444" type="BTN_FinTour">
+                    <param id="0" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="183980674317619">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="867510446648772" type="Joueur1">
+                    <param id="0" name="Instance variable">currentState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="114268614125458">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="127802528203473" type="System">
+                            <param id="0" name="Object">Joueur1</param>
+                            <param id="1" name="Expression">Joueur1.Y</param>
+                            <param id="2" name="Comparison">5</param>
+                            <param id="3" name="Value">341</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="511595698875940" type="System">
+                            <param id="0" name="Object">Joueur1</param>
+                            <param id="1" name="Expression">Joueur1.Y</param>
+                            <param id="2" name="Comparison">3</param>
+                            <param id="3" name="Value">486</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="543644074116212">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="609474190547532" type="Joueur1" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="803092506749351" type="SPR_RedFlag" />
+                                <action id="-3" name="Create object" sid="262838531295261" type="System">
+                                    <param id="0" name="Object to create">SPR_RedFlag</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="X">1188</param>
+                                    <param id="3" name="Y">416</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="733499057423308" type="Joueur1">
+                                    <param id="0" name="Instance variable">currentState</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="184971821803372" type="Joueur2">
+                                    <param id="0" name="Instance variable">currentState</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="873405972616306">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="865003369985655" type="System">
+                            <param id="0" name="Object">Joueur2</param>
+                            <param id="1" name="Expression">Joueur2.Y</param>
+                            <param id="2" name="Comparison">5</param>
+                            <param id="3" name="Value">341</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="327619947388745" type="System">
+                            <param id="0" name="Object">Joueur2</param>
+                            <param id="1" name="Expression">Joueur2.Y</param>
+                            <param id="2" name="Comparison">3</param>
+                            <param id="3" name="Value">486</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="973051012310518">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="524975855410687" type="Joueur2" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="647406084635028" type="SPR_BlueFlag" />
+                                <action id="-3" name="Create object" sid="832160569085475" type="System">
+                                    <param id="0" name="Object to create">SPR_BlueFlag</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="X">93</param>
+                                    <param id="3" name="Y">413</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="253135627830507" type="Joueur1">
+                                    <param id="0" name="Instance variable">currentState</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="860724483371513" type="Joueur2">
+                                    <param id="0" name="Instance variable">currentState</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="493281585598824">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="464084009879666" type="Joueur1">
+                    <param id="0" name="Instance variable">currentState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="415974485955627">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="905538699997107" type="System">
+                            <param id="0" name="Object">Joueur1</param>
+                            <param id="1" name="Expression">Joueur1.Y</param>
+                            <param id="2" name="Comparison">5</param>
+                            <param id="3" name="Value">341</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="326705290651448" type="System">
+                            <param id="0" name="Object">Joueur1</param>
+                            <param id="1" name="Expression">Joueur1.Y</param>
+                            <param id="2" name="Comparison">3</param>
+                            <param id="3" name="Value">486</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="757827942961074">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="466433353531285" type="Joueur1" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="881809776571900" type="SPR_RedFlag" />
+                                <action id="-3" name="Create object" sid="806993455932465" type="System">
+                                    <param id="0" name="Object to create">SPR_RedFlag</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="X">1188</param>
+                                    <param id="3" name="Y">416</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="650158581319194">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="428430276180981" type="Joueur2">
+                    <param id="0" name="Instance variable">currentState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="751974196809148">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="130031839090406" type="System">
+                            <param id="0" name="Object">Joueur2</param>
+                            <param id="1" name="Expression">Joueur2.Y</param>
+                            <param id="2" name="Comparison">5</param>
+                            <param id="3" name="Value">341</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="184714141777972" type="System">
+                            <param id="0" name="Object">Joueur2</param>
+                            <param id="1" name="Expression">Joueur2.Y</param>
+                            <param id="2" name="Comparison">3</param>
+                            <param id="3" name="Value">486</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="537060149036639">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="273069421154761" type="Joueur2" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="978486372490142" type="SPR_BlueFlag" />
+                                <action id="-3" name="Create object" sid="838769903193824" type="System">
+                                    <param id="0" name="Object to create">SPR_BlueFlag</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="X">93</param>
+                                    <param id="3" name="Y">413</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="738249551301622">
+            <conditions>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="427374695548322" type="SPR_BlueFlag" />
+                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="614292705567629" type="SPR_RedFlag" />
+                <condition id="-1" name="Compare X" sid="837610047964512" type="Joueur1">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">SPR_SpawnPoint_Section31_J2.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="802488728448794" type="SPR_BlueFlag" />
+                <action id="-9" name="Destroy" sid="570513303291864" type="SPR_RedFlag" />
+                <action id="-9" name="Destroy" sid="816085092442289" type="SPR_Section3_Case" />
+                <action id="-9" name="Destroy" sid="549187820506127" type="SPR_StartBlueFlag" />
+                <action id="-9" name="Destroy" sid="661064598796082" type="SPR_StartRedFlag" />
+                <action id="-10" name="Add to" sid="293858071638974" type="System">
+                    <param id="0" name="Variable">victoireJ1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="531597093165730">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="245554795096051" type="System">
+                            <param id="0" name="Object">Units</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="840668683513743" type="System">
+                            <param id="0" name="Object">Units</param>
+                            <param id="1" name="Expression">Units.Y</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">340</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="877212139619739" type="System">
+                            <param id="0" name="Object">Units</param>
+                            <param id="1" name="Expression">Units.Y</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">390</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="839283999299885" type="Units" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="791113537470486">
+            <conditions>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="331659037016124" type="SPR_RedFlag" />
+                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="805614125053570" type="SPR_BlueFlag" />
+                <condition id="-1" name="Compare X" sid="953171478034340" type="Joueur2">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">SPR_SpawnPoint_Section31_J1.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="393735461312775" type="SPR_BlueFlag" />
+                <action id="-9" name="Destroy" sid="166181187212161" type="SPR_RedFlag" />
+                <action id="-9" name="Destroy" sid="140899690546535" type="SPR_Section3_Case" />
+                <action id="-9" name="Destroy" sid="666362550192193" type="SPR_StartBlueFlag" />
+                <action id="-9" name="Destroy" sid="343529889776948" type="SPR_StartRedFlag" />
+                <action id="-10" name="Add to" sid="822084931417744" type="System">
+                    <param id="0" name="Variable">victoireJ2</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="647415390701846">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="195643955724308" type="System">
+                            <param id="0" name="Object">Units</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="924632638769093" type="System">
+                            <param id="0" name="Object">Units</param>
+                            <param id="1" name="Expression">Units.Y</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">340</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="338525927828912" type="System">
+                            <param id="0" name="Object">Units</param>
+                            <param id="1" name="Expression">Units.Y</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">390</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="914538174847118" type="Units" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

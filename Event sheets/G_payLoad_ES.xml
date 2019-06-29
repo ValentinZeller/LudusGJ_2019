@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>G_payLoad_ES</name>
+    <events>
+        <event-block disabled="1" sid="925548530129228">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="209141393434186" type="Joueur1">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">SPR_Section2_Payload.X</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="300931706603792" type="System">
+                    <param id="0" name="Object">Joueur1</param>
+                    <param id="1" name="Expression">Joueur1.Y</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">188</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="942191540616690" type="System">
+                    <param id="0" name="Object">Joueur1</param>
+                    <param id="1" name="Expression">Joueur1.Y</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">335</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="215163912734858" type="SPR_Section2_Payload">
+                    <param id="0" name="X">Joueur1.X-Joueur1.Width/2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="750014921754657">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="778317343816569" type="Joueur2">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">SPR_Section2_Payload.X</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="196711515307095" type="System">
+                    <param id="0" name="Object">Joueur2</param>
+                    <param id="1" name="Expression">Joueur1.Y</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">188</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="935338255381226" type="System">
+                    <param id="0" name="Object">Joueur2</param>
+                    <param id="1" name="Expression">Joueur1.Y</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">335</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="631780932694555" type="SPR_Section2_Payload">
+                    <param id="0" name="X">Joueur2.X+Joueur2.Width/2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="952961016570628">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="465796371581238" type="Joueur1">
+                    <param id="0" name="Object">SPR_Section2_Payload</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="241274960376513" type="System">
+                    <param id="0" name="Object">Joueur1</param>
+                    <param id="1" name="Expression">Joueur1.X</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">SPR_Section2_Payload.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="763421718866012" type="SPR_Section2_Payload">
+                    <param id="0" name="Pin to">Joueur1</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="307983809147063">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="746214922576862" type="Joueur2">
+                    <param id="0" name="Object">SPR_Section2_Payload</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="557925826609749" type="System">
+                    <param id="0" name="Object">Joueur2</param>
+                    <param id="1" name="Expression">Joueur2.X</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">SPR_Section2_Payload.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="545880286263444" type="SPR_Section2_Payload">
+                    <param id="0" name="Pin to">Joueur2</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="692453374882200">
+            <conditions>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="361449470952944" type="SPR_Section2_Payload" />
+                <condition id="-1" name="Compare X" sid="359057432964878" type="Joueur1">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">SPR_SpawnPoint_Section21_J2.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="323726324583219" type="SPR_Section2_Case" />
+                <action id="-9" name="Destroy" sid="912956129430259" type="SPR_Section2_Payload" />
+                <action id="-10" name="Add to" sid="181291363643149" type="System">
+                    <param id="0" name="Variable">victoireJ1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="647185309587363">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="659003357580178" type="System">
+                            <param id="0" name="Object">Units</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="553927970408598" type="System">
+                            <param id="0" name="Object">Units</param>
+                            <param id="1" name="Expression">Units.Y</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">225</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="942081969154067" type="System">
+                            <param id="0" name="Object">Units</param>
+                            <param id="1" name="Expression">Units.Y</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">300</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="634466954333584" type="Units" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="409808367830526">
+            <conditions>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="459320723017222" type="SPR_Section2_Payload" />
+                <condition id="-1" name="Compare X" sid="558111150849657" type="Joueur2">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">SPR_SpawnPoint_Section21_J1.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="470265784877036" type="SPR_Section2_Case" />
+                <action id="-9" name="Destroy" sid="713325612476251" type="SPR_Section2_Payload" />
+                <action id="-10" name="Add to" sid="956017304451672" type="System">
+                    <param id="0" name="Variable">victoireJ2</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="965149387437638">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="901335658856268" type="System">
+                            <param id="0" name="Object">Units</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="128564731521384" type="System">
+                            <param id="0" name="Object">Units</param>
+                            <param id="1" name="Expression">Units.Y</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">225</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="897751679620220" type="System">
+                            <param id="0" name="Object">Units</param>
+                            <param id="1" name="Expression">Units.Y</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">300</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="975341037898387" type="Units" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

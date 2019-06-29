@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>G_destroyHeart_ES</name>
+    <events>
+        <event-group description="" sid="560259183840228" title="Heart Setup">
+            <sub-events>
+                <event-block sid="817679718660883">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="697950046294681" type="Heart" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="679401010829515" type="Heart">
+                            <param id="0" name="Instance variable">pV</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="636059329320258">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="972629045016843" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="484021512146959" type="TXT_HeartLifeJ1">
+                            <param id="0" name="Text">SPR_HeartJ1.pV</param>
+                        </action>
+                        <action id="0" name="Set text" sid="544281790060177" type="TXT_HeartLifeJ2">
+                            <param id="0" name="Text">SPR_HeartJ2.pV</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="610802781504568" title="Joueur X attaque le coeur du joueur X">
+            <sub-events>
+                <event-block sid="211897269638720">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="384742244317260" type="BTN_FinTour" />
+                        <condition id="-11" name="For Each" sid="792830636259130" type="System">
+                            <param id="0" name="Object">Joueur2</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="865011477656489" type="Joueur2">
+                            <param id="0" name="Object">SPR_Section1_Case</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="397338888266090">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="403361472213547" type="System">
+                                    <param id="0" name="Object">Joueur2</param>
+                                    <param id="1" name="Expression">Joueur2.isAttacking</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="994178297752232" type="SPR_HeartJ1">
+                                    <param id="0" name="Instance variable">pV</param>
+                                    <param id="1" name="Value">Joueur2.Atk</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="734426916728037" type="Joueur2">
+                                    <param id="0" name="Instance variable">isAttacking</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="398714393358316">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="134380901652753" type="BTN_FinTour" />
+                        <condition id="1" name="Is overlapping another object" sid="438309505520657" type="Joueur1">
+                            <param id="0" name="Object">SPR_Section1_Case</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="352184987111733" type="System">
+                            <param id="0" name="Object">Joueur1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="292985639300957">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="946582397434291" type="System">
+                                    <param id="0" name="Object">Joueur1</param>
+                                    <param id="1" name="Expression">Joueur1.isAttacking</param>
+                                    <param id="2" name="Comparison">5</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="972887880325609" type="SPR_HeartJ2">
+                                    <param id="0" name="Instance variable">pV</param>
+                                    <param id="1" name="Value">Joueur1.Atk</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="459643724443282" type="Joueur1">
+                                    <param id="0" name="Instance variable">isAttacking</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Destruction du coeur</comment>
+        <event-block sid="211112029935921">
+            <conditions>
+                <condition id="-33" name="Pick by comparison" sid="750134454900735" type="System">
+                    <param id="0" name="Object">Heart</param>
+                    <param id="1" name="Expression">Heart.pV</param>
+                    <param id="2" name="Comparison">3</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="913172558221222" type="Heart" />
+                <action id="-15" name="Set visible" sid="921019795069170" type="SPR_HeartJ1">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="384156298564331" type="SPR_HeartJ2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="653564555424358" type="TXT_HeartLifeJ1" />
+                <action id="-9" name="Destroy" sid="956811875459809" type="TXT_HeartLifeJ2" />
+                <action id="-9" name="Destroy" sid="474895714178349" type="SPR_Section1_Case" />
+            </actions>
+            <sub-events>
+                <event-block sid="206055992532209">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="352643336762109" type="Units">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">185</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="906180738085313" type="Units" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="958479784558865">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="216569762919550" type="SPR_HeartJ1" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="460527787346692" type="System">
+                    <param id="0" name="Variable">victoireJ2</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="854658104226704">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="748240194658193" type="SPR_HeartJ2" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="864259239330415" type="System">
+                    <param id="0" name="Variable">victoireJ1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
